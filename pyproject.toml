@@ -1,14 +1,14 @@
 [build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
 
 [project]
 name = "vcon"
-version = "0.0.1"
 authors = [
     { name = "Kesara Rathnayake", email = "kesara@fq.nz" }
 ]
 description = "vCon (Virtualized Conversations) JSON data model"
+dynamic = ["version"]
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
@@ -24,6 +24,9 @@ classifiers = [
 dependencies = [
     "pydantic>=2.9.2"
 ]
+
+[project.urls]
+Home = "https://github.com/kesara/vcon/"
 
 [tool.setuptools.packages.find]
 include = ["*"]
